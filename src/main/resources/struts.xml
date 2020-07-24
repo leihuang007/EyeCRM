@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	<constant name="struts.objectFactory" value="org.apache.struts2.spring.StrutsSpringObjectFactory" />
+	<constant name="struts.ognl.allowStaticMethodAccess" value="true"/>
+    <constant name="struts.enable.DynamicMethodInvocation" value="false" />
+    <constant name="struts.devMode" value="true" />
+
+    <package name="default-hl" namespace="/" extends="struts-default,json-default,spring-default">
+    	<interceptors>
+        	<interceptor name="login" class="cn.live.shinobi_hl.common.utils.interceptor.LoginInterceptor">
+        		<param name="excludeMethods">login</param>
+        	</interceptor>
+        	<interceptor-stack name="default-interceptor-hl">
+        		<interceptor-ref name="defaultStack"/>
+        		<interceptor-ref name="login"/>
+        	</interceptor-stack>
+        </interceptors>
+        <default-interceptor-ref name="default-interceptor-hl"/>
+        <global-results>
+            <result name="error">/error.jsp</result>
+            <result name="login">/index.jsp</result>
+        </global-results>
+        <global-exception-mappings>
+            <exception-mapping exception="java.lang.Exception" result="error"/>
+        </global-exception-mappings>
+    </package>
+
+    <!-- Add packages here -->
+    <include file="cn/live/shinobi_hl/common/strutsconfig/operator.xml"/>
+    <include file="cn/live/shinobi_hl/common/utils/strutsconfig/utils.xml"/>
+    <include file="cn/live/shinobi_hl/patients/strutsconfig/patients.xml"/>
+    <include file="cn/live/shinobi_hl/officers/strutsconfig/officers.xml"/>
+
+
+</struts>

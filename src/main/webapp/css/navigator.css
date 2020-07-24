@@ -1,0 +1,21 @@
+/* CSS Document */
+/*导航页面开始*/
+.ui-accordion-header{
+	padding-left:30px;
+	font-size:1.25em;
+}
+.ui-accordion-content {
+	font-size : 1.2em;
+	font-family : georgia;
+/*	font-style : italic;*/
+}
+#menu {
+	position:relative;
+	float:left;
+	top:15px;
+	margin-right:15px;
+	width:18em;	
+	height:100%;
+}
+/*导航页面结束*/
+

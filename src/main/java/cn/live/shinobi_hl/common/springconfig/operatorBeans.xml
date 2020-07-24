@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+    <bean id="operatorDAO" class="cn.live.shinobi_hl.common.dao.impl.OperatorDaoImpl">
+        <property name="sessionFactory">
+            <ref bean="sessionFactory"/>
+        </property>
+    </bean>
+    <bean id="operatorBo" class="cn.live.shinobi_hl.common.bo.impl.OperatorBoImpl" parent="absBaseBO">
+        <property name="dao">
+            <ref bean="operatorDAO"/>
+        </property>
+    </bean>
+</beans>

@@ -1,0 +1,2 @@
+insert into M_ADMIN VALUES ('admin','admin','admin',1,'025')
+go

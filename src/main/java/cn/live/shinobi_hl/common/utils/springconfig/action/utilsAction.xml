@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+    <bean id="flexigridAction" class="cn.live.shinobi_hl.common.utils.ui.FlexigridAction" singleton="false">
+    	<property name="pageInfoBo" ref="pageInfoBo" />
+    </bean>
+    <bean id="fileDownloadAction" class="cn.live.shinobi_hl.common.utils.ui.FileDownloadAction" singleton="false">
+    	<property name="downloadBo" ref="downloadBo"/>
+    </bean>
+</beans>

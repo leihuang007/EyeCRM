@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+    <bean id="functionResult" class="cn.live.shinobi_hl.common.utils.bo.FunctionResult" singleton="false"/>
+    
+    <bean id="absBaseBO" class="cn.live.shinobi_hl.common.utils.bo.AbsBaseBusinessObject" singleton="false" abstract="true">
+    	<property name="result" ref="functionResult" />
+    </bean>
+    <bean id="pageInfoBo" class="cn.live.shinobi_hl.common.utils.bo.impl.PageInfoBoImpl" parent="absBaseBO">
+    	<property name="patientDao" ref="patientsDAO" />
+    	<property name="officerDao" ref="officersDAO" />
+    </bean>
+    <bean id="downloadBo" class="cn.live.shinobi_hl.common.utils.bo.impl.DownloadBoImpl" parent="absBaseBO">
+    	<property name="pageInfoBo" ref="pageInfoBo"/>
+    </bean>
+</beans>

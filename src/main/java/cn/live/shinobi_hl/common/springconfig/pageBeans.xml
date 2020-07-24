@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+    <bean id="areaInfoBean" class="cn.live.shinobi_hl.common.ui.pagebean.AreaInfoBean">
+        <property name="bo">
+            <ref bean="areaInfoBo"/>
+        </property>
+    </bean>
+    <bean id="assuranceTypeBean" class="cn.live.shinobi_hl.common.ui.pagebean.AssuranceTypeBean">
+        <property name="bo">
+            <ref bean="assuranceTypeBo"/>
+        </property>
+    </bean>
+    <bean id="diseaseTypeBean" class="cn.live.shinobi_hl.common.ui.pagebean.DiseaseTypeBean">
+        <property name="bo">
+            <ref bean="diseaseTypeBo"/>
+        </property>
+    </bean>
+    <bean id="firstAdviceBean" class="cn.live.shinobi_hl.common.ui.pagebean.FirstAdviceBean">
+        <property name="bo">
+            <ref bean="firstAdviceBo"/>
+        </property>
+    </bean>
+</beans>

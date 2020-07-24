@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+    <bean id="areaInfoDao" class="cn.live.shinobi_hl.common.dao.impl.AreaInfoDaoImpl">
+        <property name="sessionFactory">
+            <ref bean="sessionFactory"/>
+        </property>
+    </bean>
+    <bean id="areaInfoBo" class="cn.live.shinobi_hl.common.bo.impl.AreaInfoBoImpl" parent="absBaseBO">
+        <property name="dao">
+            <ref bean="areaInfoDao"/>
+        </property>
+    </bean>
+</beans>

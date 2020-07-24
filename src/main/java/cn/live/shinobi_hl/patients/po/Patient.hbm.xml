@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="cn.live.shinobi_hl.patients.po">
+	<class name="Patient" table="D_PATIENT" dynamic-update="true">
+		<id name="id" column="id">
+            <generator class="native"/>
+        </id>
+        <property name="areaNo" type="string" length="10" not-null="true"/>
+        <property name="areaName" type="string" length="20" 
+		formula="(select area.areaName from MD_AREA area where area.areaCode=areaNo and area.status=0)"/>
+		<property name="street" type="string" length="50" not-null="true"/>
+		<property name="neighbourhood" type="string" length="30" not-null="true"/>
+		<property name="patientName" type="string" length="20" not-null="true" unique-key="UNIQ_D_PATIENT_UC"/>
+		<property name="idNumber" type="string" length="30" not-null="true"/>
+		<property name="gender" type="int" not-null="true"/>
+		<property name="age" type="int" />
+		<property name="assuranceTypeId" type="int" />
+		<property name="assuranceType" type="string" length="20" 
+			formula="(select at.assuranceName from MD_ASSURANCE_TYPE at where at.id=assuranceTypeId and at.status=0)"/>
+		<property name="phone" type="string" length="20" not-null="true" unique-key="UNIQ_D_PATIENT_UC"/>
+		<property name="checkDate" type="date" not-null="true" unique-key="UNIQ_D_PATIENT_UC"/>
+		<property name="hypertension" type="int"/>
+		<property name="diabetes" type="int" />
+		<property name="cardiopathy" type="int" />
+		<property name="od" type="string" length="80" />
+		<property name="os" type="string" length="80" />
+		<property name="firstAdviceId" type="int" />
+		<property name="firstAdvice" type="string" length="80" 
+		formula="(select fa.firstAdvice from MD_FIRST_ADVICE fa where fa.id=firstAdviceId and fa.status=0)"/>
+		<property name="diseaseTypeId" type="int" />
+		<property name="diseaseType" type="string" length="80" 
+		formula="(select dt.diseaseTypeName from MD_DISEASE_TYPE dt where dt.id=diseaseTypeId and dt.status=0)"/>
+		<property name="comeDate" type="date" not-null="false"/>
+		<property name="formalAdvice" type="string" length="255" />
+		<property name="marketDoctor" type="string" length="255" not-null="false"/>
+		<property name="oneWeek" type="string" length="255" />
+		<property name="halfMonth" type="string" length="255" />
+		<property name="twoMonth" type="string" length="255" />
+		<property name="checkInDate" type="date" />
+		<property name="checkOutDate" type="date" />
+		<property name="operatorId" type="int" length="10" not-null="true"/>
+		<property name="doctor" type="string" length="20"/>
+		<property name="sight" type="float" />
+		<property name="lens" type="string" length="80"/>
+		<property name="status" type="int"/>
+	</class>
+
+</hibernate-mapping>

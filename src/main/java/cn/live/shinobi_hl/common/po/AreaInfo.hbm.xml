@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="cn.live.shinobi_hl.common.po">
+	<class name="AreaInfo" table="MD_AREA">
+		<id name="areaCode" column="areaCode" type="string" length="10">
+			<generator class="assigned" />
+		</id>
+		<property name="parentAreaCode" type="string" length="10" not-null="true" />
+		<property name="areaName" type="string" length="20" not-null="true"
+			unique="true" />
+		<property name="status" type="int" not-null="true"/>
+	</class>
+</hibernate-mapping>

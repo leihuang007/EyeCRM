@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+    <bean id="diseaseTypeDao" class="cn.live.shinobi_hl.common.dao.impl.DiseaseTypeDaoImpl">
+        <property name="sessionFactory">
+            <ref bean="sessionFactory"/>
+        </property>
+    </bean>
+    <bean id="diseaseTypeBo" class="cn.live.shinobi_hl.common.bo.impl.DiseaseTypeBoImpl" parent="absBaseBO">
+        <property name="dao">
+            <ref bean="diseaseTypeDao"/>
+        </property>
+    </bean>
+</beans>

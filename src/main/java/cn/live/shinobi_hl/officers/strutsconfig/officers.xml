@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	<package name="officers" extends="default-hl" namespace="/officers">
+		<!-- 添加病人 -->
+		<action name="addOfficer" class="officerAction" method="add">
+			<result name="success" type="json">
+				<param name="contentType">text/json</param>
+				<param name="excludeNullProperties">false</param>
+				<param name="root">model.funcResult</param>
+				<param name="noCache">true</param>
+				<param name="ignoreHierarchy">false</param>
+			</result>
+		</action>
+		<action name="delOfficer" class="officerAction" method="del">
+			<result name="success" type="json">
+				<param name="contentType">text/json</param>
+				<param name="excludeNullProperties">false</param>
+				<param name="root">model.funcResult</param>
+				<param name="noCache">true</param>
+				<param name="ignoreHierarchy">false</param>
+			</result>
+		</action>
+		<action name="preUpdateOfficer" class="officerAction" method="preUpdate">
+			<result name="error" type="json">
+				<param name="contentType">text/json</param>
+				<param name="excludeNullProperties">false</param>
+				<param name="root">model.funcResult</param>
+				<param name="noCache">true</param>
+				<param name="ignoreHierarchy">false</param>
+			</result>
+			<result name="success" type="dispatcher">
+				<param name="location">/officers/manage_mod.jsp</param>
+			</result>
+		</action>
+		<action name="updateOfficer" class="officerAction" method="update">
+			<result name="success" type="json">
+				<param name="contentType">text/json</param>
+				<param name="excludeNullProperties">false</param>
+				<param name="root">model.funcResult</param>
+				<param name="noCache">true</param>
+				<param name="ignoreHierarchy">false</param>
+			</result>
+		</action>
+		<action name="manageList" class="flexigridAction">
+			<param name="queryName">OFFICER_SEARCH</param>
+			<result name="success" type="json">
+				<param name="contentType">text/json</param>
+				<param name="excludeNullProperties">false</param>
+				<param name="root">model</param>
+				<param name="noCache">true</param>
+				<param name="ignoreHierarchy">false</param>
+			</result>
+		</action>
+		<action name="preDownload" class="fileDownloadAction" method="preDownload">
+			<param name="downLoadType">OFFICER_DOWNLOAD</param>
+			<result name="success" type="json">
+				<param name="contentType">text/json</param>
+				<param name="excludeNullProperties">false</param>
+				<param name="root">model.funcResult</param>
+				<param name="noCache">true</param>
+				<param name="ignoreHierarchy">false</param>
+			</result>
+		</action>
+		<action name="download" class="fileDownloadAction">
+			<param name="downLoadType">OFFICER_DOWNLOAD</param>
+			<result name="success" type="stream">
+				<param name="contentType">application/vnd.ms-excel</param>
+				<param name="inputName">targetFile</param>
+				<param name="contentDisposition">attachment;filename="${fileName}"</param>
+				<param name="bufferSize">1024</param>
+			</result>
+		</action>
+		
+	</package>
+	<!-- Add packages here -->
+
+</struts>

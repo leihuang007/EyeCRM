@@ -1,0 +1,73 @@
+/* CSS Document */
+body {
+	background: #56B1FF;
+	color: #FFFFFF;
+	margin: 20px;
+	font-family: "Lucida Grande", "Lucida Sans Unicode", Verdana, Arial,
+		Helvetica, sans-serif;
+	font-size: 12px;
+	overflow: visible;
+	scrollbar-face-color: #DCE6EE;
+	scrollbar-highlight-color: #FFFFFF;
+	scrollbar-shadow-color: #98ACCF;
+	scrollbar-3dlight-color: #B0DDF2;
+	scrollbar-arrow-color: #51A2DA;
+	scrollbar-track-color: #EBF3F5;
+	scrollbar-darkshadow-color: #DCE6EE;
+}
+
+.head {
+	background-image: url(../images/logo.png);
+	background-repeat: no-repeat;
+	background-position: left;
+	height: 100px;
+}
+
+.form_pad {
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.text_center {
+	text-align: center;
+}
+
+.textRight {
+	text-align: right;
+}
+
+.textLeft {
+	text-align: left;
+}
+
+input.text {
+	width: 80%;
+	padding: .4em;
+}
+
+input.text-a {
+	width: 10em;
+	padding: .4em;
+}
+
+#formTable {
+	width: 80%;
+}
+
+#content {
+	overflow: auto;
+	position: relative;
+	top: 15px;
+	/*	display:inline-block;*/
+	float: left;
+	height: 100%;
+	vertical-align: top;
+}
+
+.ftitle {
+	font-size: 16px;
+}
+
+.ui-progressbar .ui-progressbar-value {
+	background-image: url(/images/pbar-ani.gif);
+}

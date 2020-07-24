@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	<package name="operator" extends="default-hl" namespace="/">
+		<action name="login" class="operatorAction" method="login">
+			<result name="success" type="json">
+				<param name="contentType">text/json</param>
+				<param name="excludeNullProperties">false</param>
+				<param name="root">model.funcResult</param>
+				<param name="noCache">true</param>
+				<param name="ignoreHierarchy">false</param>
+			</result>
+		</action>
+		<action name="logout" class="operatorAction" method="logout">
+			<result name="success" type="json">
+				<param name="contentType">text/json</param>
+				<param name="excludeNullProperties">false</param>
+				<param name="root">model.funcResult</param>
+				<param name="noCache">true</param>
+				<param name="ignoreHierarchy">false</param>
+			</result>
+		</action>
+	</package>
+	<!-- Add packages here -->
+
+</struts>
