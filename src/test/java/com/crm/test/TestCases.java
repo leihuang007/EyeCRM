@@ -41,7 +41,6 @@ public class TestCases extends TestCase {
 	protected void setUp() throws Exception {
 		context = new ClassPathXmlApplicationContext("applicationContext.xml");
 	}
-	/*
 	public void testInsertAdmin() {
 		OperatorDao dao = (OperatorDao) context.getBean("operatorDAO");
 		Operator op = new Operator();
@@ -146,5 +145,4 @@ public class TestCases extends TestCase {
 			System.out.print('\t');
 		}
 	}
-	*/
 }
