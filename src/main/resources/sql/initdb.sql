@@ -1,4 +1,4 @@
-insert into m_admin VALUES (0,'admin','admin','admin',1,'025');
+insert into M_ADMIN VALUES (0,'admin','admin','admin',1,'025');
 INSERT INTO  MD_AREA  values  ('025','025','南京市',0);
 INSERT INTO  MD_AREA  values  ('025001','025','秦淮区',0);
 INSERT INTO  MD_AREA  values  ('025002','025','鼓楼区',0);
