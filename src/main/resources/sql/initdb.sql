@@ -14,4 +14,16 @@ INSERT INTO  MD_AREA  values  ('025011','025','溧水县',0);
 INSERT INTO  MD_AREA  values  ('025012','025','高淳县',0);
 INSERT INTO  MD_AREA  values  ('025013','025','白下区',0);
 
+
+INSERT INTO MD_ASSURANCE_TYPE values (0,'城镇医保',0);
+INSERT INTO MD_ASSURANCE_TYPE values (0,'农村医保',0);
+
+INSERT INTO MD_DISEASE_TYPE values (0,'青光眼',0);
+INSERT INTO MD_DISEASE_TYPE values (0,'白内障',0);
+INSERT INTO MD_DISEASE_TYPE values (0,'眼底出血',0);
+
+INSERT INTO MD_FIRST_ADVICE values (0,'留院观察',0);
+INSERT INTO MD_FIRST_ADVICE values (0,'住院治疗',0);
+INSERT INTO MD_FIRST_ADVICE values (0,'手术',0);
+
 select * from eyecrm.m_admin;
