@@ -74,7 +74,7 @@
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-c3p0</artifactId>
-			<version>4.1.7.Final</version>
+			<version>4.1.12.Final</version>
 		</dependency>
 		<!-- https://mvnrepository.com/artifact/org.apache.struts/struts2-spring-plugin -->
 		<dependency>
