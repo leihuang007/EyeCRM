@@ -11,40 +11,11 @@
 		destroy-method="close">
 		<property name="driverClass" value="com.mysql.jdbc.Driver" />
 		
-		<!-- <property name="jdbcUrl"
-			value="jdbc:mysql://192.168.0.122/eyecrm?useUnicode=true&amp;characterEncoding=utf8" />
-		<property name="user" value="dean" />
-		<property name="password" value="dean" /> -->
 		<property name="jdbcUrl"
-			value="jdbc:mysql://10.21.40.166/eyecrm?useUnicode=true&amp;characterEncoding=utf8" />
-		<property name="user" value="hl" />
-		<property name="password" value="rootroot" />
+			value="jdbc:mysql://127.0.0.1/eyecrm?useUnicode=true&amp;characterEncoding=utf8" />
+		<property name="user" value="root" />
+		<property name="password" value="Admin@123.com" />
 		
-		<!-- 
-		<property name="driverClass" value="com.microsoft.sqlserver.jdbc.SQLServerDriver" />
-		
-		<property name="jdbcUrl"
-			value="jdbc:sqlserver://192.168.56.101:1059;DatabaseName=EyeCRM" />
-		<property name="user" value="sa" />
-		<property name="password" value="123123" />
-		 -->
-		<!-- 
-		<property name="jdbcUrl" value="jdbc:sqlserver://192.168.31.166:1433;DatabaseName=EyeCRM" /> 
-		<property name="user" value="sa" /> 
-		<property name="password" value="Huanglei1987" />
-		<property name="jdbcUrl"
-			value="jdbc:sqlserver://192.168.56.101:1433;DatabaseName=EyeCRM" />
-		<property name="user" value="eyecrm" />
-		<property name="password" value="123123" />
-		<property name="jdbcUrl" value="jdbc:sqlserver://192.168.31.166:1433;DatabaseName=EyeCRM" /> 
-		<property name="user" value="sa" /> 
-		<property name="password" value="Huanglei1987" />
-		<property name="jdbcUrl"
-			value="jdbc:sqlserver://10.0.115.129:1433;DatabaseName=EyeCRM" />
-		<property name="user" value="sa" />
-		<property name="password" value="njaier&amp;025" />
-		-->
-
 	</bean>
 
 	<!-- hibernate.cfg.xml Spring config -->
